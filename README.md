@@ -26,5 +26,5 @@ The output is a file with the following structure:
 For example: 
 
 ```
-pod-sample	2024-04-14 20:51:19+00:00	2024-04-14 20:51:44+00:00	Succeeded	controller-manager
+pod-sample	2024-04-14 20:51:19+00:00	2024-04-14 20:51:44+00:00	Running controller-manager
 ```
