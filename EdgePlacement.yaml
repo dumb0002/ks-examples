@@ -1,0 +1,17 @@
+apiVersion: edge.kubestellar.io/v2alpha1
+kind: EdgePlacement
+metadata:
+  name: sdf-edge-placement
+spec:
+  locationSelectors:
+  - matchLabels: {"location-group":"edge"}
+  downsync:
+  - apiGroup: ""
+    resources: [ pods ]
+    namespaces: [ sharpeningcloudcomputepod ]
+    objectNames: [ "*" ]
+  - apiGroup: apis.kcp.io
+    resources: [ apibindings ]
+    namespaceSelectors: []
+    objectNames: [ "bind-kubernetes", "bind-apps" ]
+  wantSingletonReportedState: true
