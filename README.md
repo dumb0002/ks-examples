@@ -29,7 +29,7 @@ For example:
 pod-sample	2024-04-14 20:51:19+00:00	2024-04-14 20:51:44+00:00	Running  controller-manager
 ```
 
-## Set-up Kubernets horizontal pod autoscaling for a deployment:
+## Set-up Kubernetes horizontal pod autoscaling for a deployment:
 
 The Kubernetes Horizontal Pod Autoscaler (HPA) automatically scales the number of pods in a deployment based on a custom metric or a resource metric from a pod using the Metrics Server. For example, if there is a sustained spike in CPU use over 80%, then the HPA deploys more pods to manage the load across more resources, maintaining application performance. 
 
