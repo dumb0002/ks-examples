@@ -71,13 +71,13 @@ spec:
 $ kubectl get deployment metrics-server -n kube-system
 ```
 
-3. Deploy your sample application:
+4. Deploy your sample application:
 
 ```
 $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/controllers/nginx-deployment.yaml
 ```
 
-4. Set up horizontal pod autoscaling:
+5. Set up horizontal pod autoscaling:
 
 ```
 $ kubectl autoscale deployment nginx-deployment --cpu-percent=80 --min=1 --max=4
@@ -85,7 +85,7 @@ $ kubectl autoscale deployment nginx-deployment --cpu-percent=80 --min=1 --max=4
 
 This will increase pods to a maximum of four replicas (--max=4) when the nginx application experiences more than 80% CPU use (--cpu-percent=80) over a sustained period. 
 
-5. To check the status of Horizontal Pod Autoscaler:
+6. To check the status of Horizontal Pod Autoscaler:
 
 Initially, you might observe an unknown value in the current state, as it takes some time to pull metrics from the Metrics Server and generate the percentage use.
 
